@@ -12,7 +12,7 @@ const CouponCard = ({
   iconBg = "bg-pink-400",
 }) => {
   return (
-    <div className="relative w-full bg-white rounded-2xl  overflow-hidden border border-gray-100 transition-transform hover:scale-105 duration-300">
+    <div className="relative w-full bg-white rounded-[var(--radius-md)] overflow-hidden border border-gray-100 transition-transform shadow-md hover:scale-105 duration-300">
       {/* Top Colored Section */}
       <div
         className={`bg-gradient-to-br ${topColor} p-3 xs:p-4 sm:p-6 flex flex-col items-center justify-center text-center h-24 xs:h-28 sm:h-32 lg:h-40 relative`}
@@ -113,26 +113,23 @@ const Disc = () => {
   ];
 
   return (
-    <div className=" py-6 sm:py-8 lg:py-12">
+    <div className="py-6 sm:py-8 lg:py-12">
       <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
         {/* Title */}
-        <div className="text-center mb-4 sm:mb-6 lg:mb-8">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+        <div className="text-center mb-7 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
             Exclusive Offers
           </h2>
-          <p className="text-xs sm:text-sm text-gray-500 mt-1 sm:mt-2">
-            Grab the best deals on your favorite products
-          </p>
         </div>
 
         <Swiper
           modules={[Autoplay]}
-          //   autoplay={{
-          //     delay: 3000,
-          //     disableOnInteraction: false,
-          //     pauseOnMouseEnter: true,
-          //   }}
-          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          loop={false}
           speed={800}
           spaceBetween={12}
           slidesPerView={2.2}
@@ -165,7 +162,7 @@ const Disc = () => {
           className="w-full"
         >
           {offers.map((offer, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="my-2">
               <CouponCard {...offer} />
             </SwiperSlide>
           ))}

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
@@ -12,34 +13,40 @@ import AllProducts from "./pages/AllProducts";
 import Login from "./pages/Login";
 
 function App() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
   return (
-    <Routes>
-      {/* Login route without Navbar/Footer */}
-      <Route path="/login" element={<Login />} />
-      
-      {/* Routes with Navbar and Footer */}
-      <Route
-        path="/*"
-        element={
-          <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/product/:id" element={<SingleProduct />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/payment" element={<Payment />} />
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/order/:id" element={<SingleOrder />} />
-                <Route path="/facewash" element={<AllProducts />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        }
+    <>
+      {/* Login Modal - rendered outside of routes so it can appear anywhere */}
+      <Login 
+        isOpen={isLoginOpen} 
+        onClose={() => setIsLoginOpen(false)} 
       />
-    </Routes>
+
+      <Routes>
+        <Route
+          path="/*"
+          element={
+            <div className="min-h-screen flex flex-col">
+              <Navbar onLoginClick={() => setIsLoginOpen(true)} />
+              <main className="flex-grow">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/product/:id" element={<SingleProduct />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/payment" element={<Payment />} />
+                  <Route path="/orders" element={<Orders />} />
+                  <Route path="/order/:id" element={<SingleOrder />} />
+                  <Route path="/facewash" element={<AllProducts />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          }
+        />
+      </Routes>
+    </>
   );
 }
 

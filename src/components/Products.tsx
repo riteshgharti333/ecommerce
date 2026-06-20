@@ -124,14 +124,15 @@ const Products = () => {
     <div className="min-h-screen bg-[var(--background)]">
       <div className="max-w-7xl mx-auto px-1 sm:px-3 lg:px-8 py-8 sm:py-12">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl sm:text-3xl uppercase font-medium text-[var(--text)] mb-3">
+
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
             Our Products
-          </h1>
+          </h2>
         </div>
 
         {/* Products Grid */}
-       <ProductCards />
+        <ProductCards />
       </div>
 
       <style>{`
