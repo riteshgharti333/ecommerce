@@ -11,6 +11,7 @@ import Orders from "./pages/Orders";
 import SingleOrder from "./pages/SingleOrder";
 import AllProducts from "./pages/AllProducts";
 import Login from "./pages/Login";
+import BottomBar from "./components/BottomBar";
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -41,6 +42,7 @@ function App() {
                   <Route path="/facewash" element={<AllProducts />} />
                 </Routes>
               </main>
+               <BottomBar /> 
               <Footer />
             </div>
           }
