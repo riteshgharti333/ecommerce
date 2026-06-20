@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 
 const BottomBar = () => {
-  const location = useLocation();
   
   const navItems = [
     {
@@ -47,6 +46,14 @@ const BottomBar = () => {
       href: "/profile",
     },
   ];
+
+   const location = useLocation();
+  
+  // Hide on these routes
+  const hiddenRoutes = ["/facewash", "/product", "/cart", "/checkout"];
+  const shouldHide = hiddenRoutes.some(route => location.pathname.startsWith(route));
+  
+  if (shouldHide) return null;
 
   return (
     <>

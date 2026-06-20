@@ -124,11 +124,11 @@ const Disc = () => {
 
         <Swiper
           modules={[Autoplay]}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true,
+          // }}
           loop={false}
           speed={800}
           spaceBetween={12}

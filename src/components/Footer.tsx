@@ -1,19 +1,20 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import {
   Sparkles,
   Mail,
   Phone,
   MapPin,
-//   Facebook,
-//   Instagram,
-//   Twitter,
-//   Youtube,
+  //   Facebook,
+  //   Instagram,
+  //   Twitter,
+  //   Youtube,
   ArrowRight,
   Shield,
   Truck,
   Leaf,
   Heart,
-} from 'lucide-react'
+} from "lucide-react";
+import { paymentLists } from "../assets/data/paymentIcon";
 
 const Footer = () => {
   return (
@@ -27,12 +28,16 @@ const Footer = () => {
                 Subscribe to our newsletter
               </h3>
               <p className="text-sm text-[var(--text-secondary)]">
-                Get 10% off your first order and be the first to know about new products and exclusive offers.
+                Get 10% off your first order and be the first to know about new
+                products and exclusive offers.
               </p>
             </div>
             <div className="flex gap-2">
               <div className="relative flex-1 max-w-md">
-                <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]" />
+                <Mail
+                  size={16}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]"
+                />
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -58,12 +63,17 @@ const Footer = () => {
                 <Sparkles size={16} className="text-white" />
               </div>
               <div>
-                <h2 className="text-lg font-semibold tracking-wide text-[var(--text)]">NURA</h2>
-                <p className="text-[8px] tracking-[0.2em] text-[var(--accent)] uppercase">Skin Care</p>
+                <h2 className="text-lg font-semibold tracking-wide text-[var(--text)]">
+                  NURA
+                </h2>
+                <p className="text-[8px] tracking-[0.2em] text-[var(--accent)] uppercase">
+                  Skin Care
+                </p>
               </div>
             </Link>
             <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">
-              Premium skincare crafted with natural ingredients for your daily glow.
+              Premium skincare crafted with natural ingredients for your daily
+              glow.
             </p>
             {/* <div className="flex gap-2">
               {[
@@ -90,16 +100,16 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2.5">
               {[
-                'All Products',
-                'Best Sellers',
-                'New Arrivals',
-                'Collections',
-                'Gift Sets',
-                'Sale',
+                "All Products",
+                "Best Sellers",
+                "New Arrivals",
+                "Collections",
+                "Gift Sets",
+                "Sale",
               ].map((link) => (
                 <li key={link}>
                   <Link
-                    to={`/${link.toLowerCase().replace(' ', '-')}`}
+                    to={`/${link.toLowerCase().replace(" ", "-")}`}
                     className="text-sm text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors"
                   >
                     {link}
@@ -116,16 +126,16 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2.5">
               {[
-                'Contact Us',
-                'FAQs',
-                'Shipping & Returns',
-                'Track Order',
-                'Size Guide',
-                'Store Locator',
+                "Contact Us",
+                "FAQs",
+                "Shipping & Returns",
+                "Track Order",
+                "Size Guide",
+                "Store Locator",
               ].map((link) => (
                 <li key={link}>
                   <Link
-                    to={`/${link.toLowerCase().replace(' & ', '-').replace(' ', '-')}`}
+                    to={`/${link.toLowerCase().replace(" & ", "-").replace(" ", "-")}`}
                     className="text-sm text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors"
                   >
                     {link}
@@ -142,12 +152,12 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2.5">
               {[
-                'Our Story',
-                'Ingredients',
-                'Sustainability',
-                'Blog',
-                'Press',
-                'Careers',
+                "Our Story",
+                "Ingredients",
+                "Sustainability",
+                "Blog",
+                "Press",
+                "Careers",
               ].map((link) => (
                 <li key={link}>
                   <Link
@@ -188,7 +198,8 @@ const Footer = () => {
               <li>
                 <span className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
                   <MapPin size={14} className="mt-0.5 flex-shrink-0" />
-                  123 Beauty Lane, Suite 100<br />
+                  123 Beauty Lane, Suite 100
+                  <br />
                   Los Angeles, CA 90001
                 </span>
               </li>
@@ -200,12 +211,12 @@ const Footer = () => {
       {/* Trust Bar */}
       <div className="border-t border-[var(--border)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid  grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: <Truck size={20} />, text: 'Free Shipping $50+' },
-              { icon: <Shield size={20} />, text: 'Secure Payment' },
-              { icon: <Leaf size={20} />, text: 'Natural Ingredients' },
-              { icon: <Heart size={20} />, text: 'Cruelty Free' },
+              { icon: <Truck size={20} />, text: "Free Shipping $50+" },
+              { icon: <Shield size={20} />, text: "Secure Payment" },
+              { icon: <Leaf size={20} />, text: "Natural Ingredients" },
+              { icon: <Heart size={20} />, text: "Cruelty Free" },
             ].map((item, index) => (
               <div
                 key={index}
@@ -220,7 +231,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-[var(--border)]">
+      <div className=" pb-15 lg:pb-0 border-t border-[var(--border)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-[var(--text-muted)]">
@@ -246,13 +257,13 @@ const Footer = () => {
                 Cookie Policy
               </Link>
             </div>
-            <div className="flex items-center gap-2">
-              {['Visa', 'Mastercard', 'Amex', 'PayPal'].map((payment) => (
+            <div className="flex items-center justify-center gap-3 mb-4">
+              {paymentLists.map((icon, index) => (
                 <div
-                  key={payment}
-                  className="w-10 h-6 bg-[var(--background)] border border-[var(--border)] rounded flex items-center justify-center text-[9px] text-[var(--text-muted)] font-medium"
+                  key={index}
+                  className="w-10 h-6 rounded flex items-center justify-center"
                 >
-                  {payment}
+                  {icon}
                 </div>
               ))}
             </div>
@@ -260,7 +271,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

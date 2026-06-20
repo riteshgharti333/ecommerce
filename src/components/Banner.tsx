@@ -61,39 +61,36 @@ const Banner = () => {
       <div className="custom-pagination flex justify-center items-center gap-3 py-4 bg-white"></div>
 
       {/* Custom CSS */}
-      <style>{`
-        .custom-pagination {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-        }
+     <style>{`
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
 
-        .custom-bullet {
-          width: 7px !important;
-          height: 7px !important;
-          border-radius: 50% !important;
-          background: #D1D5DB !important;
-          opacity: 1 !important;
-          margin: 0 !important;
-          transition: all 0.3s ease;
-          cursor: pointer;
-          display: inline-block;
-        }
+  .custom-dot {
+    width: 24px !important;
+    height: 3px !important;
+    border-radius: 3px !important;
+    background: #d1d5db !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+  }
 
-        .custom-bullet.swiper-pagination-bullet-active {
-          width: 10px !important;
-          height: 10px !important;
-          background: var(--primary, #2E7D32) !important;
-          transform: scale(1.2);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
+  .custom-dot.swiper-pagination-bullet-active {
+    width: 32px !important;
+    height: 3px !important;
+    background: var(--primary, #2E7D32) !important;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+  }
 
-        /* Remove default swiper pagination */
-        .swiper-pagination {
-          display: none !important;
-        }
-      `}</style>
+  .swiper-pagination {
+    display: none !important;
+  }
+`}</style>
     </div>
   );
 };
