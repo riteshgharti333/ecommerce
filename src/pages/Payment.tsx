@@ -125,7 +125,7 @@ const Payment = () => {
     setShowOrderConfirm(true);
     setTimeout(() => {
       setShowOrderConfirm(false);
-      navigate("/order");
+      navigate("/orders");
     }, 3000);
   };
 
