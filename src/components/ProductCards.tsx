@@ -189,10 +189,10 @@ const ProductCards = () => {
                   fill={wishlist.includes(product.id) ? "currentColor" : "none"}
                 />
               </button>
-              <button className="flex-1 py-1.5 rounded-md bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all text-[11px] font-medium flex items-center justify-center gap-1">
+              <Link to="/cart" className="flex-1 py-1.5 rounded-md bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all text-[11px] font-medium flex items-center justify-center gap-1">
                 <ShoppingBag size={13} />
-                Add
-              </button>
+                Buy Now
+              </Link>
             </div>
           </div>
         </div>

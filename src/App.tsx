@@ -12,6 +12,7 @@ import SingleOrder from "./pages/SingleOrder";
 import AllProducts from "./pages/AllProducts";
 import Login from "./pages/Login";
 import BottomBar from "./components/BottomBar";
+import ScrollToTop from "./components/ScrollTop";
 
 function App() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -19,10 +20,9 @@ function App() {
   return (
     <>
       {/* Login Modal - rendered outside of routes so it can appear anywhere */}
-      <Login 
-        isOpen={isLoginOpen} 
-        onClose={() => setIsLoginOpen(false)} 
-      />
+      <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+
+      <ScrollToTop />
 
       <Routes>
         <Route
@@ -43,7 +43,7 @@ function App() {
                   <Route path="/facewash" element={<AllProducts />} />
                 </Routes>
               </main>
-               <BottomBar /> 
+              <BottomBar />
               <Footer />
             </div>
           }

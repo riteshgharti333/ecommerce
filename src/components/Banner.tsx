@@ -61,7 +61,7 @@ const Banner = () => {
       <div className="custom-pagination flex justify-center items-center gap-3 py-4 bg-white"></div>
 
       {/* Custom CSS */}
-     <style>{`
+      <style>{`
   .custom-pagination {
     display: flex;
     justify-content: center;
