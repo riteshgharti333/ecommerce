@@ -33,6 +33,7 @@ function App() {
               <main className="flex-grow">
                 <Routes>
                   <Route path="/" element={<Home />} />
+                  <Route path="/home" element={<Home />} />
                   <Route path="/product/:id" element={<SingleProduct />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<Checkout />} />
